@@ -2,7 +2,7 @@
 
 Ajoute des boutons supplémentaires pour mettre sous code, ajouter un lien, séparer horizontalement
 
-![demo du script](https://tabbygarf.club/Mg5ehoIgzq.gif)
+![demo du script](demo.gif)
 
 Si ca bug, faut rafraichir
 

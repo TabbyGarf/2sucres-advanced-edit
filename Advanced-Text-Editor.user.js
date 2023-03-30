@@ -9,8 +9,26 @@
 
 (function() {
     'use strict';
+    const imageUrl = 'https://tabbygarf.club/risitoggle.png';
+
+    setInterval(() => {
+        // recherche l'élément image actuel
+        const forumImage = document.querySelector('img[src="/static/media/risibank.4f2a9f99.png"]');
+        if (forumImage) {
+            // crée un nouvel élément image avec la nouvelle URL
+            const newImage = document.createElement('img');
+            newImage.src = imageUrl;
+            newImage.alt = 'logo';
+            newImage.style.height = '32px';
+
+            // remplace l'élément image actuel par le nouvel élément image
+            forumImage.parentNode.replaceChild(newImage, forumImage);
+        }
+    }, 1);
+
     // récupère la zone de message
     const textarea = document.getElementById("FormMessage");
+    const ifBtn = document.querySelector('#AdBut');
     function addButtons(){
         // identifie le bouton et la barre pour barrer
         const icons = document.getElementsByTagName("i");
@@ -43,7 +61,9 @@
 
     }
     setTimeout(() => {
-        addButtons()
+        if (ifBtn == null) {
+            addButtons();
+        }
     }, 1000);
     window.addEventListener('popstate', () => {
         addButtons();
@@ -52,6 +72,7 @@
     function createButton(icon, tooltip, format, onclick) {
         const button = document.createElement("button");
         button.classList.add("btn", "btn-small", "jaune");
+        button.id = "AdBut"
         button.innerHTML = `<i class="material-icons">${icon}</i>`;
         button.setAttribute("title", tooltip);
         if (format !== null) {

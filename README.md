@@ -1,6 +1,6 @@
 # Advanced Edit pour 2Sucres
 
-Ajoute des boutons supplémentaires pour mettre sous code, ajouter un lien, séparer horizontalement
+Ajoute des boutons supplémentaires - avec reduction de la taille du logo Risibank - pour mettre sous code, ajouter un lien, séparer horizontalement
 
 ![demo du script](demo.gif)
 
